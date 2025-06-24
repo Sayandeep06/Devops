@@ -25,3 +25,5 @@ ECS :
 
 create a cluster
 create a task definiotion
+create a service with tasks
+add loadbalanceer and target groups to the service
