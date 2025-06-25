@@ -13,3 +13,7 @@ Cluster
 ![alt text](image.png)
 
 ![alt text](image-1.png)
+
+
+Deployment manages replica sets which manages a bunch of pods
+
