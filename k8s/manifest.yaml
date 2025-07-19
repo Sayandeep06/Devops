@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: nginx
   labels: 
-    app: nginx.  
+    app: nginx 
 spec:
   containers:
   - name: nginx
@@ -11,3 +11,26 @@ spec:
     ports:
     - containerPort: 80
     - containerPort: 443
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: backend
+  namespace: backend-team
+spec: 
+  replicas: 2
+  selector: 
+    matchLabels: 
+      app: backend
+  template: 
+    metadata:
+      labels: 
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: sayandeep06/backend-pg:2
+          ports:
+            - containerPort: 3000
